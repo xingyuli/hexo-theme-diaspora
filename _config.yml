@@ -21,7 +21,7 @@ welcome_cover: https://b.oss.viclau.top/img/welcome-cover-anglt.jpeg
 
 # 默认文章封面图（随机调用,支持外链）
 cover: 
-  - /img/cover.jpg
+  - https://b.oss.viclau.top/img/cover-csz.jpeg
   # - /img/welcome-cover.jpg
 
  
