@@ -8,7 +8,7 @@
             $.ajax({
                 url: '/socialbinding/count/users',
                 success: function(data) {
-                    $('.subscribed-user .wechat-user').text(data['WECHAT']);
+                    $('.subscribed-user.wechat-user').text(data['WECHAT']);
                 }
             });
         }
