@@ -14,6 +14,11 @@
     <div id="header">
         <div>
             <a class="image-logo" href="/"></a>
+            <button class="subscribed-user-container">
+                <span class="iconfont icon-wechat"></span>
+                <span class="subscribed-user wechat-user">0</span>
+                <a href="<%- theme.links.wechat %>" target="_blank">+关注</a>
+            </button>
 			<% if (theme.local_search.enable){ %>
 			<div class="iconfont icon-search switchsearch" href="/search/" title="搜索"></div>
 			<%}%>
