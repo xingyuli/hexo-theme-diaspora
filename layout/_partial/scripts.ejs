@@ -12,5 +12,42 @@
                 }
             });
         }
+
+        function turnOffChat() {
+            $('#chat-iframe-container').animate({
+                left: '100%'
+            }, 500, 'swing', function() {
+                $(this).css({ display: 'none' });
+            });
+
+            $('#floating-toolbar').show();
+        }
+
+        // Ensure iframe is initially off-screen to the right
+        $('#chat-iframe-container').css({
+            display: 'none',
+            left: '100%'
+        });
+
+        $('#open-chat').on('click', function() {
+            if ($('#chat-iframe-container').is(':visible')) return;
+            $('#chat-iframe-container')
+                .css({ display: 'block' })
+                .animate({
+                    left: '20px'
+                }, 500, 'swing');
+
+            $('#floating-toolbar').hide();
+        });
+
+        $('#close-chat').on('click', function() {
+            turnOffChat();
+        });
+
+        $(document).on('keydown', function(event) {
+            if (event.which === 27 && $('#chat-iframe-container').is(':visible')) {
+                turnOffChat();
+            }
+        });
     });
 </script>

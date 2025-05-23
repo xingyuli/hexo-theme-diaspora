@@ -19,6 +19,19 @@
                 <span class="subscribed-user wechat-user">0</span>
                 <a href="<%- theme.links.wechat %>" target="_blank">+关注</a>
             </button>
+
+            <!-- Floating toolbar in bottom-right -->
+            <div id="floating-toolbar">
+                <button id="open-chat">Chat</button>
+                <!-- Add more buttons here, e.g., <button id="contact-us">Contact</button> -->
+            </div>
+
+            <!-- Iframe for chat UI -->
+            <div id="chat-iframe-container">
+                <iframe id="chat-iframe" src="<%- theme.links.chat %>"></iframe>
+                <button id="close-chat">×</button>
+            </div>
+
 			<% if (theme.local_search.enable){ %>
 			<div class="iconfont icon-search switchsearch" href="/search/" title="搜索"></div>
 			<%}%>
